@@ -125,6 +125,8 @@ class Composer:
         nn_args.add_argument('--scheduled_sampling', type=str, nargs='+', default=[Model.ScheduledSamplingPolicy.NONE], help='Define the schedule sampling policy. If set, have to indicates the parameters of the chosen policy')
         nn_args.add_argument('--target_weights', nargs='?', choices=Model.TargetWeightsPolicy.get_policies(), default=Model.TargetWeightsPolicy.LINEAR,
                              help='policy to choose the loss contribution of each step')
+        # TODO: finish multi-model thing for the system
+        nn_args.add_argument('--traning_model',type = str,default='rnn_encoder_decoder',help='specify which model to use(\'rnn_encoder_decoder\')')
         ModuleLoader.loop_processings.add_argparse(nn_args, 'Transformation to apply on each ouput.')
 
         # Training options (Warning: if modifying something here, also make the change on save/restore_params() )
