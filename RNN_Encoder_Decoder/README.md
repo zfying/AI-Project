@@ -4,17 +4,6 @@
 
 Havard CS182 Fall 2018 AI Final Project
 
-## Dependencies
-
-The program requires the following dependencies (easy to install using pip):
- * Python 3
- * TensorFlow (tested with v0.10.0rc0. Won't work with previous versions)
- * CUDA (for using gpu, see TensorFlow [installation page](https://www.tensorflow.org/versions/master/get_started/os_setup.html#optional-install-cuda-gpus-on-linux) for more details)
- * Numpy (should be installed with TensorFlow)
- * Mido (midi library)
- * Tqdm (for the nice progression bars)
- * OpenCv (Sorry, there is no simple way to install it with python 3. It's primarily used as visualisation tool to print the piano roll so is quite optional. All OpenCv calls are contained inside the imgconnector file so if you want to use test the program without OpenCv, you can try removing the functions inside the file)
-
 ## Usage
 
 Put training data inside `/data/midi/ragtimemusic`. After modifying the training data, make sure to delete everything inside `/data/samples`.
